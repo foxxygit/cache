@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.suning.com/schema/cache"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:ns1="http://www.springframework.org/schema/tool" targetNamespace="http://www.suning.com/schema/cache"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:import namespace="http://www.springframework.org/schema/beans"
+		schemaLocation="http://www.springframework.org/schema/beans/spring-beans.xsd" />
+	<xsd:element name="cache">
+		<xsd:complexType>
+			<xsd:attribute name="id" type="xsd:string" use="required"/>
+			<xsd:attribute name="name" type="xsd:string" use="required"/>
+			<xsd:attribute name="timeToLiveSeconds" type="xsd:int"/>
+			<xsd:attribute name="timeToIdleSeconds" type="xsd:int"/>
+			<xsd:attribute name="overflowToDisk" type="xsd:boolean"/>
+			<xsd:attribute name="memoryStoreEvictionPolicy" type="xsd:string"
+				use="required" />
+			<xsd:attribute name="maxElementsOnDisk" type="xsd:int"/>
+			<xsd:attribute name="maxElementsInMemory" type="xsd:int"
+				use="required" />
+			<xsd:attribute name="eternal" type="xsd:boolean" use="required" />
+			<xsd:attribute name="statistics" type="xsd:boolean"/>
+			<xsd:attribute name="diskExpiryThreadIntervalSeconds"
+				type="xsd:int" use="required" />
+			<xsd:attribute name="broadcastListener" type="xsd:string"
+				use="required" />
+			<xsd:attribute name="serializerAwareClassName" type="xsd:string"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="cacheManager">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="cache-levelFirst" />
+				<xsd:element ref="cache-levelSecond" />
+			</xsd:sequence>
+			<xsd:attribute name="serializerName" use="required"
+				type="xsd:string" />
+			<xsd:attribute name="name" use="required" type="xsd:string" />
+			<xsd:attribute name="id" type="xsd:string" use="required" />
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="cache-levelSecond">
+		<xsd:complexType>
+			<xsd:attribute name="name" use="required" type="xsd:string" />
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="cache-levelFirst">
+		<xsd:complexType>
+			<xsd:attribute name="name" use="required" type="xsd:string" />
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
