@@ -29,7 +29,6 @@ import com.foxxy.git.cache.DefaultCacheProxy;
  * 缓存注解拦截的切面，根据不同的注解执行不同的逻辑<br>
  * 〈功能详细描述〉
  *
- * @author 15050977 xy
  * @see [相关类/方法]（可选）
  * @since [产品/模块版本] （可选）
  */

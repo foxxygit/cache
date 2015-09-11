@@ -10,7 +10,6 @@ import com.foxxy.git.cache.redis.RedisCacheProvider;
  * 封装了一级，二级的缓存管理器,对上层透明<br>
  * 〈功能详细描述〉
  *
- * @author 15050977 xy
  * @see [相关类/方法]（可选）
  * @since [产品/模块版本] （可选）
  */
@@ -93,7 +92,7 @@ public class CacheManager {
         if (name != null && key != null) {
             Cache cache = _GetCache(level, name);
             if (cache != null)
-                return (T) cache.get(key,resultClass);
+                return cache.get(key,resultClass);
         }
         return null;
     }

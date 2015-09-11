@@ -6,7 +6,6 @@ import com.foxxy.git.spring.CacheManagerHolder;
  * 默认的缓存广播监听实例操作，需要与awareClassName配合使用<br>
  * 〈功能详细描述〉
  *
- * @author 15050977 xy
  * @see [相关类/方法]（可选）
  * @since [产品/模块版本] （可选）
  */

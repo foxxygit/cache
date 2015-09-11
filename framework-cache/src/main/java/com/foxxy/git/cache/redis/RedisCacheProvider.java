@@ -14,7 +14,6 @@ import com.foxxy.git.context.SpringContext;
  * Redis 缓存提供者<br>
  * 〈功能详细描述〉
  *
- * @author 15050977 xy
  * @see [相关类/方法]（可选）
  * @since [产品/模块版本] （可选）
  */

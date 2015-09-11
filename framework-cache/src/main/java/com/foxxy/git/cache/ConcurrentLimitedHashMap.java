@@ -6,7 +6,6 @@ import java.util.concurrent.ConcurrentHashMap;
  * 带最大条目限制的缓存包装<br>
  * 〈功能详细描述〉
  *
- * @author 15050977 xy
  * @see [相关类/方法]（可选）
  * @since [产品/模块版本] （可选）
  */
@@ -20,7 +19,8 @@ public class ConcurrentLimitedHashMap<K, V> extends ConcurrentHashMap<K, V> {
         this.size = size;
     }
 
-    public V put(K key, V value) {
+    @Override
+	public V put(K key, V value) {
         //
         if (!(this.size() > size)) {
             return super.put(key, value);
@@ -28,7 +28,8 @@ public class ConcurrentLimitedHashMap<K, V> extends ConcurrentHashMap<K, V> {
         return value;
     }
 
-    public V putIfAbsent(K key, V value) {
+    @Override
+	public V putIfAbsent(K key, V value) {
         //
         if (!(this.size() > size)) {
             return super.putIfAbsent(key, value);

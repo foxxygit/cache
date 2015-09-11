@@ -8,7 +8,6 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 简单的ip流控实现，可以用令牌的模式实现高级流控<br>
  * 〈功能详细描述〉
  *
- * @author 15050977 xy
  * @see [相关类/方法]（可选）
  * @since [产品/模块版本] （可选）
  */

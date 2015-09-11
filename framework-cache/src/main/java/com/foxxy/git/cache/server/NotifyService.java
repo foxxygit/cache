@@ -25,19 +25,18 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Service;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.foxxy.git.cache.ElementWrapper;
 import com.foxxy.git.monitor.DefaultThreadPoolExecutorService;
 import com.foxxy.git.monitor.DefaultThreadPoolMonitorService;
 import com.foxxy.git.utils.NetUtils;
 import com.foxxy.git.utils.ResourceUtils;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 /**
  * 缓存通知服务<br>
  * 〈功能详细描述〉
  *
- * @author 15050977 xy
  * @see [相关类/方法]（可选）
  * @since [产品/模块版本] （可选）
  */

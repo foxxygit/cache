@@ -7,7 +7,6 @@ import java.util.LinkedHashMap;
  * 简单的LRU实现，不是线程安全，经典的Map cpu100%<br>
  * 〈功能详细描述〉
  *
- * @author 15050977 xy
  * @see [相关类/方法]（可选）
  * @since [产品/模块版本] （可选）
  */
